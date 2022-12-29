@@ -41,16 +41,16 @@ async fn main() -> Result<(), Status> {
     });
 
     let (sender, receiver) = tokio::sync::mpsc::channel::<String>(64);
-
     // Receive blocks until the ctx is cancelled or an error occurs.
     // Or simply use the `subscription.subscribe` method.
 
     subscription
         .receive(
-            |mut message, cancel| async move {
+            move |mut message, cancel| async move {
                 // Handle data.
                 let data = message.message.data.as_slice();
-                sender.send(String::from_utf8(message.message.data.clone()).unwrap());
+                let data_string = String::from_utf8(message.message.data.clone()).unwrap();
+                sender.clone().send(data_string).await.unwrap();
                 println!("{:?}", data);
 
                 // Ack or Nack message.

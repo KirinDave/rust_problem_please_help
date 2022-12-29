@@ -1202,7 +1202,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "testproblem"
+name = "test_problem_please_help"
 version = "0.1.0"
 dependencies = [
  "bytes",
