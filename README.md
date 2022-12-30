@@ -1,4 +1,11 @@
-# Hello, help please?
+# Thanks very much!
+
+With help from folks on Mastodon (see changelog) I had this problem solved. Now, I need to do the writeup I promised. I think there's a great deal of subtlety in the overloaded syntax around `move Fn`'s and `async move`s. I think many
+folks might be confused the way I am.
+
+
+
+# ~~Hello, help please?~~ (Problem solved, but request left for reviewing)
 
 In my efforts to learn rust (and tell a heck of a cool story about the inner SRE culture of GOOGLE) I've been trying to write a program to bridge Google Cloud PubSub to MQTT. While writing that program, I've had to learn a lot of Rust. This is the first time
 I've hit a problem I can't read my docs or experiment through. I promise that if someone helps me understand, I'll put up a more thorough and helpful explanation somehwere that is discoverable and adequately SEO'd so that other people will struggle less with tis.
